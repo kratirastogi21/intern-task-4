@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> API DEMO </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+      .container{
+          border:solid rgb(1, 27, 51);
+          margin:auto;
+          padding:20px;
+          background-color: cadetblue;
+          font-style: italic;
+          
+      }
+      body{
+          background-color: rgb(224, 189, 112); 
+          }
+  </style>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <center>
+                <h1>API DEMO, Enter Name To Get A Cool Profile Image</h1>
+                <label for="name">NAME</label>
+                <input type="text" class="form-control" id="name">
+                <button type="button" class="btn btn-success btn-inline">Submit</button>
+                <br>
+                <img src="logo.png" width="200" height="180"class="imgchange">
+              </center>
+        </div>
+    </main>
+    <script>
+        $(document).ready(function(){
+            $('button').click(function(){
+   const name = $('#name').val();
+   alert(name);
+   $('.imgchange').attr('src',`https://joeschmoe.io/api/v1/random /${name}`);
+            });
+   
+  
+  
+  
+        });
+    </script>
+    
+</body>
+</html>
